@@ -13,7 +13,7 @@ void append(struct Cell* c, int val);
 void free_all(struct Cell* c);;
 
 void fatal_error(){
-  printf("fatal error"); 
+  printf("fatal error");
   free_all(head);
 }
 
@@ -42,6 +42,10 @@ void append(struct Cell* c, int val)
 
 }
 
+int delete(){
+  
+}
+
 void free_all(struct Cell* c){
  if(c->next == NULL){
     return;
@@ -51,7 +55,7 @@ void free_all(struct Cell* c){
  }
 }
 
-int main() 
+int main()
 {
 
   head = (struct Cell*)malloc(sizeof(struct Cell));
@@ -66,5 +70,5 @@ int main()
 
 
   free_all(head);
-  return 0; 
+  return 0;
 }
