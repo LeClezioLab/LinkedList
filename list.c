@@ -11,6 +11,8 @@ struct Cell* head;
 struct Cell* new_Cell(int val);
 void append(struct Cell* c, int val);
 void free_all(struct Cell* c);;
+void insert(struct Cell* c, int val);
+
 
 void fatal_error(){
   printf("fatal error"); 
@@ -42,6 +44,8 @@ void append(struct Cell* c, int val)
 
 }
 
+
+
 void free_all(struct Cell* c){
  if(c->next == NULL){
     return;
@@ -58,6 +62,7 @@ int main()
   head->next = NULL;
   head->value = 3;
   append(head,5);
+  insert(head,9);
 
 
   printf("[head][%d]->[first][%d]\n",head->value,head->next->value);
