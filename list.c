@@ -44,6 +44,15 @@ void append(struct Cell* c, int val)
 
 }
 
+void insert(struct Cell* c ,int val)
+{
+  struct Cell* tmp;
+tmp = (struct Cell*)malloc(sizeof(struct Cell));
+
+tmp->next = c->next;
+tmp->value = val;
+c->next =tmp;
+}
 
 
 void free_all(struct Cell* c){
